@@ -1,0 +1,289 @@
+﻿@page
+@model SunnyHurghada.Pages.IndexModel
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+
+	<!-- ============================================================== -->
+	<!-- Top header  -->
+	<!-- ============================================================== -->
+
+	<div class="clearfix"></div>
+	<!-- ============================================================== -->
+	<!-- Top header  -->
+	<!-- ============================================================== -->
+
+
+	<!-- ======================= Start Banner ===================== -->
+	<div class="main-banner vedio-banner search-bottom">
+		<div class="overlay"></div>	
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/W0Xq30cwhiA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+		</div>
+		<div class="container">
+			<div class="col-md-12 col-sm-12">
+
+				<div class="caption text-center cl-white mb-5">
+					<span class="stylish">Travel is only glamorous in retrospect</span>
+					<h1>Explore & Travel</h1>
+				</div>
+
+				<form class="st-search-form-tour icon-frm withlbl" method="get" >
+					<div class="g-field-search">
+						<div class="row">
+							<div class="col-lg-5 col-md-4 border-right mxnbr">
+								<div class="form-group">
+									<i class="ti-location-pin field-icon"></i>
+									<label>Select Destination</label>
+									<select class="form-control" name="destination" id="destination">
+										<option value=" ">Select Destination</option>
+										@foreach (var destination in Model.Destinations ){
+											 <option value="@destination.Name" >@destination.Name</option>
+											@(Model.SelectedDestination == destination.Name)
+										}
+									</select>
+								</div>
+							</div>
+
+							<div class="col-lg-5 col-md-4 border-right mxnbr">
+								<div class="form-group">
+									<i class="ti-flag-alt-2 field-icon"></i>
+									<label>Select Category</label>
+									<select class="form-control" name="category" id="category">
+										<option value = " ">Select Category</option>
+										@foreach (var tourType in Model.TourTypeNames)
+										{
+											<option value="@tourType.TourTypeLocalizeds.First().Name"  >@tourType.TourTypeLocalizeds.First().Name</option>
+											@(Model.SelectedCategory == tourType.TourTypeLocalizeds.First().Name )
+										}
+									</select>
+								</div>
+							</div>
+
+							<div class="col-lg-2 p-0 mp-15">
+								<div class="form-group  search">
+									<button class="btn btn-theme btn-search" type="submit">Search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<!-- ======================= End Banner ===================== -->
+
+	<!-- ======================= Local Experiences ===================== -->
+	<section class="pb-4">
+
+		<div class="container">
+			<div class="sec-heading center">
+				<p>Sunny Hurghada</p>
+				<h2>Featured Tours</h2>
+			</div>
+
+			<div class="row">
+				@foreach (var spot in Model.FilteredTours) {
+					<!-- Single Place -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="singlePlaceitem">
+							<figure class="singlePlacewrap">
+								<a class="place-link" asp-page="/TourDetail" asp-route-id="@spot.Id">
+									<img class="cover" src="img/tours/@spot.SpotImages.First().ImgUrl" alt="room">
+								</a>
+							</figure>
+							<div class="placeDetail">
+								<span class="onsale-section"><span class="onsale">@spot.Discount% Off</span></span>
+								<div class="placeDetail-left">
+									<div class="item-rating">
+										<i class="fa fa-clock filled"></i>
+										<span>@spot.Duration hours</span>
+									</div>
+									<h4 class="title"><a asp-page="/TourDetail" asp-route-id="@spot.Id">@spot.SpotLocalizeds.First().Name</a></h4>
+									<span class="placeDetail-detail"><i class="ti-location-pin"></i>@spot.Destination.Name</span>
+								</div>
+								<div class="pricedetail-box">
+									<h6 class="price-title-cut">$@((int)spot.AdultPrice)</h6>
+									<h4 class="price-title">
+										@{
+											var discountedPrice = spot.AdultPrice - (spot.Discount * spot.AdultPrice / 100);
+										}
+										$@((int)discountedPrice)
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				}			
+				</div>
+				
+			</div>
+		</section>
+		<!-- ======================= Local Experiences End ===================== -->
+		
+			<!-- ================= Activities start ========================= -->
+			<section class="gray">
+				<div class="container">
+					
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="sec-heading center">
+								<p>Sunny Hurghada</p>
+								<h2>Popular Destinations</h2>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="owl-carousel owl-theme" id="lists-slide">
+                        @foreach (var destination in Model.Destinations)
+                        {
+							<div class="single-item">
+								<div class="destination-item">
+									<span class="discount-off">-@destination.Discount%</span>
+									<figure class="destination-list-wrap">
+										<a class="destination-listlink" asp-page="/listing" asp-route-name="@destination.Name" asp-route-id="@destination.Id">
+											<img class="cover" src="img/destinations/@destination.Img" alt="">
+										</a>
+									</figure>
+									<div class="destination-listdetails">
+										<h4 class="title"><a class="title-ln" asp-page="/listing" asp-route-name="@destination.Name" asp-route-id="@destination.Id">@destination.Name </a></h4>
+									</div>
+								</div>
+							</div>
+                        }
+							</div>
+						</div>
+					</div>
+			
+				</div>
+			</section>
+			<!-- ========================= End Activities Section ============================ -->
+			
+			<!-- ================= true Facts start ========================= -->
+			<section class="theme-bg">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-lg-4 col-md-4">
+							<div class="facts-wrap light">
+								<div class="facts-icon">
+									<i class="ti-star"></i>
+								</div>
+								<div class="facts-detail">
+									<h2>Best Rates</h2>
+									<p>Morbi semper fames</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-4">
+							<div class="facts-wrap light">
+								<div class="facts-icon">
+									<i class="ti-headphone"></i>
+								</div>
+								<div class="facts-detail">
+									<h2>24/7 Support</h2>
+									<p>Morbi semper fames</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-4">
+							<div class="facts-wrap light">
+								<div class="facts-icon">
+									<i class="ti-face-smile"></i>
+								</div>
+								<div class="facts-detail">
+									<h2>98% Happy Travelers</h2>
+									<p>Morbi semper fames</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- ================= End true Facts ========================= -->
+			
+			<!-- ============================ Our Story Start ================================== -->
+			<section>
+			
+				<div class="container">
+				
+					<!-- row Start -->
+					<div class="row align-items-center">
+
+						<div class="col-lg-6 col-md-6">
+							<img src="img/transfer.jpg" class="img-fluid rounded" alt="" />
+						</div>
+
+						<div class="col-lg-6 col-md-6">
+							<div class="story-wrap explore-content">
+								
+								<!-- <span class="ipn-subtitle">Sunnu Hurghada</span> -->
+								<h2>Transfer Service</h2>
+								<p>
+									<ul class="avl-features third d-block">
+										<li class="mw-100">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+										<li class="mw-100">Aliquam tincidunt mauris eu risus.</li>
+										<li class="mw-100">Vestibulum auctor dapibus neque.</li>
+										<li class="mw-100">Nunc dignissim risus id metus.</li>
+										<li class="mw-100">Cras ornare tristique elit.</li>
+										<li class="mw-100">Vivamus vestibulum ntulla nec ante.</li>
+										<li class="mw-100">Praesent placerat risus quis eros.</li>
+										<li class="mw-100">Fusce pellentesque suscipit nibh.</li>
+									</ul>
+								</p>
+								
+							</div>
+						</div>
+						
+					</div>
+					<!-- /row -->					
+					
+				</div>
+						
+			</section>
+			<!-- ============================ Our Story End ================================== -->
+			<!-- ========================= End Recent Blog Section ============================ -->
+	<!-- ============================ Newsletter Start ================================== -->
+	<!-- ============================ Newsletter Start ================================== -->
+	<section class="alert-wrap pt-5 pb-5" style="background:#ed7e35 url(img/bg-new.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="jobalert-sec">
+						<h3 class="mb-1 text-light">Get New Offers & Deals Notification!</h3>
+						<p class="text-light">Subscribe & get all Offers & Deals notification.</p>
+					</div>
+				</div>
+				<form method="post" class="col-lg-6 col-md-6" asp-page-handler="Email">
+
+					<div class="input-group">
+						<input type="email" class="form-control" placeholder="Enter Your Email" asp-for="NewGuest.Email">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-black black">Subscribe</button>
+						</div>
+					</div>
+					<!-- Display validation error for NewGuest.Email -->
+					<span asp-validation-for="NewGuest.Email" class="text-danger"></span>
+
+				</form>
+
+			</div>
+		</div>
+	</section>
+	<!-- ============================ Newsletter Start ================================== -->
+	<!-- ============================ Newsletter Start ================================== -->
+	<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->

@@ -1,0 +1,749 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SunnyHurghada.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SunnyHurghada.wo4s60e8yx.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\css\\ajax-loader.gif"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\colors.css",
+      "PackagePath": "staticwebassets\\css\\colors.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\slick.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\nav.css",
+      "PackagePath": "staticwebassets\\css\\nav.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\plugins.css",
+      "PackagePath": "staticwebassets\\css\\plugins.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\slick-theme.less",
+      "PackagePath": "staticwebassets\\css\\slick-theme.less"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\css\\slick-theme.scss"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\slick.scss",
+      "PackagePath": "staticwebassets\\css\\slick.scss"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\src\\datedropper.eot",
+      "PackagePath": "staticwebassets\\css\\src\\datedropper.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\src\\datedropper.svg",
+      "PackagePath": "staticwebassets\\css\\src\\datedropper.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\src\\datedropper.ttf",
+      "PackagePath": "staticwebassets\\css\\src\\datedropper.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\src\\datedropper.woff",
+      "PackagePath": "staticwebassets\\css\\src\\datedropper.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\LineIcons.eot",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\LineIcons.svg",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\LineIcons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\LineIcons.woff",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\LineIcons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.woff2"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\icofont.eot",
+      "PackagePath": "staticwebassets\\fonts\\icofont.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\icofont.svg",
+      "PackagePath": "staticwebassets\\fonts\\icofont.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\icofont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icofont.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\icofont.woff",
+      "PackagePath": "staticwebassets\\fonts\\icofont.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\icofont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\icofont.woff2"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\summernote.eot",
+      "PackagePath": "staticwebassets\\fonts\\summernote.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\summernote.ttf",
+      "PackagePath": "staticwebassets\\fonts\\summernote.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\summernote.woff",
+      "PackagePath": "staticwebassets\\fonts\\summernote.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\404.png",
+      "PackagePath": "staticwebassets\\img\\404.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\about.png",
+      "PackagePath": "staticwebassets\\img\\about.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\add.svg",
+      "PackagePath": "staticwebassets\\img\\add.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\app-banner.png",
+      "PackagePath": "staticwebassets\\img\\app-banner.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\arow_left.png",
+      "PackagePath": "staticwebassets\\img\\arow_left.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\arrow_right.png",
+      "PackagePath": "staticwebassets\\img\\arrow_right.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\img\\banner-1.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\bg-new.png",
+      "PackagePath": "staticwebassets\\img\\bg-new.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\c-1.jpg",
+      "PackagePath": "staticwebassets\\img\\c-1.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\c-2.jpg",
+      "PackagePath": "staticwebassets\\img\\c-2.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\c-3.jpg",
+      "PackagePath": "staticwebassets\\img\\c-3.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\c-4.jpg",
+      "PackagePath": "staticwebassets\\img\\c-4.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\call.svg",
+      "PackagePath": "staticwebassets\\img\\call.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\card-pay.png",
+      "PackagePath": "staticwebassets\\img\\card-pay.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\close.png",
+      "PackagePath": "staticwebassets\\img\\close.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\course-title-curve.png",
+      "PackagePath": "staticwebassets\\img\\course-title-curve.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\destinations\\cairo-giza.jpg",
+      "PackagePath": "staticwebassets\\img\\destinations\\cairo-giza.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\destinations\\hurghada.jpg",
+      "PackagePath": "staticwebassets\\img\\destinations\\hurghada.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\destinations\\marsaalam.jpg",
+      "PackagePath": "staticwebassets\\img\\destinations\\marsaalam.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\destinations\\sharmelsheikh.jpg",
+      "PackagePath": "staticwebassets\\img\\destinations\\sharmelsheikh.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\favicon.svg",
+      "PackagePath": "staticwebassets\\img\\favicon.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\landing-bg.png",
+      "PackagePath": "staticwebassets\\img\\landing-bg.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\lightbox-next.png",
+      "PackagePath": "staticwebassets\\img\\lightbox-next.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\lightbox-prev.png",
+      "PackagePath": "staticwebassets\\img\\lightbox-prev.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\loading.gif",
+      "PackagePath": "staticwebassets\\img\\loading.gif"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\logo-light.png",
+      "PackagePath": "staticwebassets\\img\\logo-light.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\logo-white.svg",
+      "PackagePath": "staticwebassets\\img\\logo-white.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\img\\logo.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\mansmiling.png",
+      "PackagePath": "staticwebassets\\img\\mansmiling.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\marker.png",
+      "PackagePath": "staticwebassets\\img\\marker.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\pattern.png",
+      "PackagePath": "staticwebassets\\img\\pattern.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\payment.svg",
+      "PackagePath": "staticwebassets\\img\\payment.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\paypal.png",
+      "PackagePath": "staticwebassets\\img\\paypal.png"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\desert-safari.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\desert-safari.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\dolphins.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\dolphins.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\g-1.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\g-1.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\g-2.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\g-2.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\g-3.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\g-3.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\g-4.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\g-4.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\gifton-island.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\gifton-island.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\mount-sinai.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\mount-sinai.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\pyramids-of-giza.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\pyramids-of-giza.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\tours\\wadi-qulan.jpg",
+      "PackagePath": "staticwebassets\\img\\tours\\wadi-qulan.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\transfer.jpg",
+      "PackagePath": "staticwebassets\\img\\transfer.jpg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\img\\type.svg",
+      "PackagePath": "staticwebassets\\img\\type.svg"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\aos.js",
+      "PackagePath": "staticwebassets\\js\\aos.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\circleMagic.min.js",
+      "PackagePath": "staticwebassets\\js\\circleMagic.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\cl-switch.js",
+      "PackagePath": "staticwebassets\\js\\cl-switch.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\js\\daterangepicker.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\dropzone.js",
+      "PackagePath": "staticwebassets\\js\\dropzone.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\imagesloaded.js",
+      "PackagePath": "staticwebassets\\js\\imagesloaded.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\isotope.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\lightbox.js",
+      "PackagePath": "staticwebassets\\js\\lightbox.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\map_infobox.js",
+      "PackagePath": "staticwebassets\\js\\map_infobox.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\markerclusterer.js",
+      "PackagePath": "staticwebassets\\js\\markerclusterer.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\old-custom.js",
+      "PackagePath": "staticwebassets\\js\\old-custom.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\rangeslider.js",
+      "PackagePath": "staticwebassets\\js\\rangeslider.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\slick.js",
+      "PackagePath": "staticwebassets\\js\\slick.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\js\\slider-bg.js",
+      "PackagePath": "staticwebassets\\js\\slider-bg.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\training\\Sunny Hurghada\\Sunny Hurghada\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SunnyHurghada.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SunnyHurghada.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SunnyHurghada.props",
+      "PackagePath": "build\\SunnyHurghada.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SunnyHurghada.props",
+      "PackagePath": "buildMultiTargeting\\SunnyHurghada.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SunnyHurghada.props",
+      "PackagePath": "buildTransitive\\SunnyHurghada.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

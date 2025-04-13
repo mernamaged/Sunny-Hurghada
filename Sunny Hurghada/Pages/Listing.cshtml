@@ -1,0 +1,161 @@
+﻿@page 
+@model SunnyHurghada.Pages.ListingModel
+@{
+}
+
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+
+	<!-- ============================================================== -->
+	<!-- Top header  -->
+	<!-- ============================================================== -->
+	<div class="clearfix"></div>
+	<!-- ============================================================== -->
+	<!-- Top header  -->
+	<!-- ============================================================== -->
+
+
+	<!-- ============================ Page Title Start================================== -->
+	<div class="image-cover page-title" style="background:url(img/banner-1.jpg) no-repeat;" data-overlay="6">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+						<h2 class="ipt-title">@Model.Name</h2>
+						<!-- <span class="ipn-subtitle text-light">Home</span> -->
+	
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ============================ Page Title End ================================== -->
+
+			<!-- =================== Sidebar Search ==================== -->
+			<section class="gray">
+				<div class="container">
+					<div class="row">
+							
+						<div class="order-1 content-area col-lg-12 col-md-12 order-md-1 order-lg-2">
+							<div class="row">
+							
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div class="shorting-wrap">
+										<h5 class="shorting-title">@Model.TotalSpots</h5>
+										<div class="shorting-right">
+											<label>Short By:</label>
+											<div class="dropdown show">
+												<a class="btn btn-filter dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="selection">Most Rated</span>
+												</a>
+												<div class="drp-select dropdown-menu">
+													<a class="dropdown-item" href="JavaScript:Void(0);">Most Rated</a>
+													<a class="dropdown-item" href="JavaScript:Void(0);">Most Viewed</a>
+													<a class="dropdown-item" href="JavaScript:Void(0);">News Listings</a>
+													<a class="dropdown-item" href="JavaScript:Void(0);">High Rated</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="row m-0">
+
+						@foreach (var spot in Model.spotsbyname)
+						{
+							<!-- Single Place -->
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="singlePlaceitem">
+									<figure class="singlePlacewrap">
+										<a class="place-link" asp-page="/TourDetail" asp-route-id="@spot.Id">
+											<img class="cover" src="img/tours/@spot.SpotImages.First().ImgUrl" alt="room">
+										</a>
+									</figure>
+									<div class="placeDetail">
+										<span class="onsale-section"><span class="onsale">@spot.Discount% Off</span></span>
+										<div class="placeDetail-left">
+											<div class="item-rating">
+												<i class="fa fa-clock filled"></i>
+												<span>@spot.Duration hours</span>
+											</div>
+											<h4 class="title"><a asp-page="/TourDetail" asp-route-id="@spot.Id">@spot.SpotLocalizeds.First().Name</a></h4>
+											<span class="placeDetail-detail"><i class="ti-location-pin"></i>@spot.Destination.Name</span>
+										</div>
+										<div class="pricedetail-box">
+											<h6 class="price-title-cut">$@((int)spot.AdultPrice)</h6>
+											<h4 class="price-title">
+												@{
+													var discountedPrice = spot.AdultPrice - (spot.Discount * spot.AdultPrice / 100);
+												}
+												$@((int)discountedPrice)
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+							
+							<div class="row m-0">
+
+								<div class="col-md-12 col-sm-12 mt-3">
+									<div class="text-center">
+										
+										<div class="spinner-grow text-danger" role="status">
+										  <span class="sr-only">Loading...</span>
+										</div>
+										<div class="spinner-grow text-warning" role="status">
+										  <span class="sr-only">Loading...</span>
+										</div>
+										<div class="spinner-grow text-success" role="status">
+										  <span class="sr-only">Loading...</span>
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================== Sidebar Search ==================== -->
+	<!-- ============================ Newsletter Start ================================== -->
+	<section class="alert-wrap pt-5 pb-5" style="background:#ed7e35 url(img/bg-new.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="jobalert-sec">
+						<h3 class="mb-1 text-light">Get New Offers & Deals Notification!</h3>
+						<p class="text-light">Subscribe & get all Offers & Deals notification.</p>
+					</div>
+				</div>
+				<form method="post" class="col-lg-6 col-md-6">
+
+					<div class="input-group">
+						<input type="email" class="form-control" placeholder="Enter Your Email" asp-for="NewGuest.Email">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-black black">Subscribe</button>
+						</div>
+					</div>
+					<!-- Display validation error for NewGuest.Email -->
+					<span asp-validation-for="NewGuest.Email" class="text-danger"></span>
+
+				</form>
+
+			</div>
+		</div>
+	</section>
+	<!-- ============================ Newsletter Start ================================== -->
+			
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->

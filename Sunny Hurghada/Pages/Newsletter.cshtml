@@ -1,0 +1,36 @@
+﻿@using Sunny_Hurghada.Models
+@model Sunny_Hurghada.Pages.Newsletter
+
+
+@{
+	// Pass the model to the layout to render the newsletter section
+	Layout = "_Layout";
+	ViewData["NewsletterModel"] = Model.NewGuest;
+}
+<!-- ============================ Newsletter Start ================================== -->
+<section class="alert-wrap pt-5 pb-5" style="background:#ed7e35 url(img/bg-new.png);">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="jobalert-sec">
+					<h3 class="mb-1 text-light">Get New Offers & Deals Notification!</h3>
+					<p class="text-light">Subscribe & get all Offers & Deals notification.</p>
+				</div>
+			</div>
+			<form method="post" class="col-lg-6 col-md-6" >
+
+				<div class="input-group">
+					<input type="email" class="form-control" placeholder="Enter Your Email" asp-for="NewGuest.Email">
+					<div class="input-group-append">
+						<button type="submit" class="btn btn-black black">Subscribe</button>
+					</div>
+				</div>
+				<!-- Display validation error for NewGuest.Email -->
+				<span asp-validation-for="NewGuest.Email" class="text-danger"></span>
+
+			</form>
+
+		</div>
+	</div>
+</section>
+<!-- ============================ Newsletter Start ================================== -->
