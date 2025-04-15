@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Sunny_Hurghada.Mangers;
+using Sunny_Hurghada.Managers;
 using Sunny_Hurghada.Models;
 using Sunny_Hurghada.Repositories;
 
@@ -22,8 +22,10 @@ namespace SunnyHurghada
             builder.Services.AddScoped<TourTypeRepository>();
             builder.Services.AddScoped<SpotRepository>();
             builder.Services.AddScoped<GuestEmailRepository>();
-            builder.Services.AddScoped<LayoutManger>();
+            builder.Services.AddScoped<LayoutManager>();
             builder.Services.AddScoped<TransferReprository>();
+            builder.Services.AddScoped<PaymentRepository>();
+            builder.Services.AddScoped<LanguageRepository>();
 
             // Add services to the container.
             builder.Services.AddRazorPages();

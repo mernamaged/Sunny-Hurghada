@@ -81,7 +81,7 @@ public partial class SunnyHurghadaContext : DbContext
             entity.Property(e => e.CreatedAt).HasColumnType("smalldatetime");
             entity.Property(e => e.Email)
                 .IsRequired()
-                .HasMaxLength(200)
+                .HasMaxLength(100)
                 .IsUnicode(false);
         });
 
@@ -99,12 +99,11 @@ public partial class SunnyHurghadaContext : DbContext
         {
             entity.ToTable("Payment");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreatedAt).HasColumnType("smalldatetime");
             entity.Property(e => e.Status)
                 .IsRequired()
-                .HasMaxLength(10)
-                .IsFixedLength();
+                .HasMaxLength(20)
+                .IsUnicode(false);
             entity.Property(e => e.TotalAmount).HasColumnType("decimal(10, 2)");
         });
 
@@ -135,7 +134,6 @@ public partial class SunnyHurghadaContext : DbContext
         {
             entity.ToTable("SpotBooking");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Email)
                 .IsRequired()
                 .HasMaxLength(100)
@@ -157,7 +155,7 @@ public partial class SunnyHurghadaContext : DbContext
             entity.HasOne(d => d.Payment).WithMany(p => p.SpotBookings)
                 .HasForeignKey(d => d.PaymentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SpotBooking_Payment");
+                .HasConstraintName("FK_SpotBooking_Payment1");
 
             entity.HasOne(d => d.Spot).WithMany(p => p.SpotBookings)
                 .HasForeignKey(d => d.SpotId)
@@ -185,6 +183,7 @@ public partial class SunnyHurghadaContext : DbContext
 
             entity.ToTable("SpotLocalized");
 
+            entity.Property(e => e.LanguageId).ValueGeneratedOnAdd();
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(255);
@@ -245,7 +244,6 @@ public partial class SunnyHurghadaContext : DbContext
         {
             entity.ToTable("TransferBooking");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Destination)
                 .IsRequired()
                 .HasMaxLength(20)

@@ -3,56 +3,45 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Sunny_Hurghada.Models;
 using Sunny_Hurghada.Repositories;
 
-namespace SunnyHurghada.Pages;
-
-public class IndexModel : PageModel
+namespace SunnyHurghada.Pages
 {
-    private readonly DestinationRepository destinationRepo;
-    private readonly SpotRepository spotRepository;
-    private readonly TourTypeRepository tourTypeRepository;
-    private readonly GuestEmailRepository guestEmailRepository;
-
-    public List<Destination> Destinations { get; set; }
-    public List<Spot> SpotsName { get; set; }
-    public List<TourType> TourTypeNames { get; set; }
-    [BindProperty]
-    public GuestEmail NewGuest { get; set; }
-    public List<Spot> FilteredTours { get; set; }
-    [BindProperty(SupportsGet = true)]
-    public string SelectedDestination { get; set; }
-
-    [BindProperty(SupportsGet = true)]
-    public string SelectedCategory { get; set; } 
-
-    public IndexModel( DestinationRepository destinationRepository, SpotRepository spotRepository,TourTypeRepository tourTypeRepository,GuestEmailRepository guestEmailRepository)
+    public class IndexModel : PageModel
     {
-        destinationRepo = destinationRepository;
-        this.spotRepository=spotRepository;
-        this.tourTypeRepository = tourTypeRepository;
-        this.guestEmailRepository = guestEmailRepository;
-    }
+        private readonly DestinationRepository _destinationRepo;
+        private readonly SpotRepository _spotRepo;
+        private readonly TourTypeRepository _tourTypeRepo;
 
-    public void OnGet(string destination , string category)
-    {
-        SelectedDestination = destination;
-        SelectedCategory = category;
-        TourTypeNames = tourTypeRepository.GetAll();
-        Destinations = destinationRepo.GetAll();
-        SpotsName = spotRepository.GetSpots();
-        FilteredTours = spotRepository.Search(SelectedDestination, SelectedCategory);
-    }
+        public List<Destination> Destinations { get; set; }
+        public List<string> TourTypeNames { get; set; }
 
-    public IActionResult OnPostEmail()
-    {
-        if (!ModelState.IsValid)
+        [BindProperty]
+        public List<Spot> SpotResults { get; set; } = new();
+        public List<string> DestinationNames { get; private set; }
+        [BindProperty(SupportsGet = true)]
+        public string SelectedDestination { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SelectedCategory { get; set; }
+        public int Id { get; set; }
+        public IndexModel(
+            DestinationRepository destinationRepository,
+            SpotRepository spotRepository,
+            TourTypeRepository tourTypeRepository)
         {
-            return Page();
+            _destinationRepo = destinationRepository;
+            _spotRepo = spotRepository;
+            _tourTypeRepo = tourTypeRepository;
         }
-        NewGuest.CreatedAt = DateTime.Now;
 
-        guestEmailRepository.Add(NewGuest);
-
-        return Page();
+        public async Task OnGet(string destination, string TourType,int id =1)
+        {
+            Id = id;
+            SelectedDestination = destination;
+            SelectedCategory = TourType;
+            DestinationNames = await _destinationRepo.GetDestinationsNames();
+            TourTypeNames = await _tourTypeRepo.GetTourTypeLocalizedNames(Id);
+            SpotResults = await _spotRepo.GetSearchResults(SelectedDestination, SelectedCategory);
+            Destinations = await _destinationRepo.GetAll();
+        }
     }
-
 }

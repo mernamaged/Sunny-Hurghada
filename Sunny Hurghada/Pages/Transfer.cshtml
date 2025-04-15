@@ -1,203 +1,142 @@
-﻿@page 
+﻿@page
 @model SunnyHurghada.Pages.TransferModel
 @{
 }
+<div id="main-wrapper">
 
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <div id="main-wrapper">
-		
-            <!-- ============================================================== -->
-            <!-- Top header  -->
-            <!-- ============================================================== -->
-          
-			<div class="clearfix"></div>
-			<!-- ============================================================== -->
-			<!-- Top header  -->
-			<!-- ============================================================== -->
-			
-			<!-- ============================ Page Title Start================================== -->
-			<div class="image-cover page-title" style="background:url(img/banner-1.jpg) no-repeat;" data-overlay="6">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							
-							<h2 class="ipt-title">Transfer</h2>
-							<!-- <span class="ipn-subtitle text-light">Who we are & our mission</span> -->
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ============================ Page Title End ================================== -->
-			
-			<!-- ============================ Who We Are Start ================================== -->
-			<section class="pt-4">
-				<div class="container">
-					
-					<div class="row mt-5 row">
-						
-						<div class="col-lg-5 col-md-5 mb-5 mb-md-0">
-							<div class="story-wrap explore-content pb-5">
-								
-								<!-- <span class="ipn-subtitle">Sunnu Hurghada</span> -->
-								<h2 class="mb-4">Transfer Service</h2>
-								<p>
-									<ul class="avl-features third d-block">
-										<li class="mw-100">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-										<li class="mw-100">Aliquam tincidunt mauris eu risus.</li>
-										<li class="mw-100">Vestibulum auctor dapibus neque.</li>
-										<li class="mw-100">Nunc dignissim risus id metus.</li>
-										<li class="mw-100">Cras ornare tristique elit.</li>
-										<li class="mw-100">Vivamus vestibulum ntulla nec ante.</li>
-										<li class="mw-100">Praesent placerat risus quis eros.</li>
-										<li class="mw-100">Fusce pellentesque suscipit nibh.</li>
-									</ul>
-								</p>
-								
-							</div>
-							<img src="img/transfer.jpg" class="img-fluid rounded" alt="" />
-						</div>
-						<div class="col-lg-7 col-md-7">
-							<div class="contact-form">
-								<form method="post">
-							<div asp-validation-summary="All"></div>
-									<div class="row">
-										<div class="col-lg-12 col-md-12">
-											<div class="form-group">
-										<label asp-for="NewTransfer.Destination">Choose Your Destination</label>
-										<input asp-for="NewTransfer.Destination" type="text" class="form-control" placeholder="Select Destination">
-										<span asp-validation-for="NewTransfer.Destination"></span>
-											</div>
-										</div>
-									</div>
+    <!-- Page Title -->
+    <div class="image-cover page-title" style="background:url(img/banner-1.jpg) no-repeat;" data-overlay="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="ipt-title">Transfer</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
-									<div class="row">
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.FullName">Full Name</label>
-										<input asp-for="NewTransfer.FullName" type="text" class="form-control" placeholder="FullName">
-										<span asp-validation-for="NewTransfer.FullName"></span>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.Email">Email</label>
-										<input asp-for="NewTransfer.Email" type="email" class="form-control" placeholder="Email">
-										<span asp-validation-for="NewTransfer.Email"></span>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-											  <label>Phone</label>
-										<input asp-for="NewTransfer.Phone" type="text" class="form-control" placeholder="Phone">
-										<span asp-validation-for="NewTransfer.Phone"></span>
+    <!-- Transfer Section -->
+    <section class="pt-4">
+        <div class="container">
+            <div class="row mt-5">
 
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.PickUpLocation">Pick-up Location</label>
-										<input asp-for="NewTransfer.PickUpLocation" type="text" class="form-control" placeholder="Pick-up Location">
-										<span asp-validation-for="NewTransfer.PickUpLocation"></span>
+                <!-- Left Content -->
+                <div class="col-lg-5 mb-5">
+                    <div class="story-wrap explore-content pb-5">
+                        <h2 class="mb-4">Transfer Service</h2>
+                        <ul class="avl-features third d-block">
+                            <li class="mw-100">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li class="mw-100">Aliquam tincidunt mauris eu risus.</li>
+                            <li class="mw-100">Vestibulum auctor dapibus neque.</li>
+                            <li class="mw-100">Nunc dignissim risus id metus.</li>
+                            <li class="mw-100">Cras ornare tristique elit.</li>
+                            <li class="mw-100">Vivamus vestibulum ntulla nec ante.</li>
+                            <li class="mw-100">Praesent placerat risus quis eros.</li>
+                            <li class="mw-100">Fusce pellentesque suscipit nibh.</li>
+                        </ul>
+                    </div>
+                    <img src="img/transfer.jpg" class="img-fluid rounded" alt="Transfer Service Image" />
+                </div>
 
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.Adults">Adults</label>
-										<input asp-for="NewTransfer.Adults" type="number" class="form-control" placeholder="0">
-										<span asp-validation-for="NewTransfer.Adults"></span>
+                <!-- Form Section -->
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <form method="post">
+                            <div asp-validation-summary="All"></div>
 
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.Children">Children</label>
-										<input asp-for="NewTransfer.Children" type="number" class="form-control" placeholder="0">
-										<span asp-validation-for="NewTransfer.Children"></span>
+                            <div class="form-group">
+                                <label asp-for="NewTransfer.Destination">Choose Your Destination</label>
+                                <input asp-for="NewTransfer.Destination" class="form-control" placeholder="Select Destination" />
+                                <span asp-validation-for="NewTransfer.Destination"></span>
+                            </div>
 
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.PickupDate">Pickup Date</label>
-										<input asp-for="NewTransfer.PickupDate" type="date" class="form-control" placeholder="0">
-										<span asp-validation-for="NewTransfer.PickupDate"></span>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.FullName">Full Name</label>
+                                        <input asp-for="NewTransfer.FullName" class="form-control" placeholder="Full Name" />
+                                        <span asp-validation-for="NewTransfer.FullName"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.Email">Email</label>
+                                        <input asp-for="NewTransfer.Email" type="email" class="form-control" placeholder="Email" />
+                                        <span asp-validation-for="NewTransfer.Email"></span>
+                                    </div>
+                                </div>
+                            </div>
 
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="form-group">
-										<label asp-for="NewTransfer.PickupTime">Pickup Time</label>
-										<input asp-for="NewTransfer.PickupTime" type="time" class="form-control" placeholder="0">
-										<span asp-validation-for="NewTransfer.PickupTime"></span>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input asp-for="NewTransfer.Phone" class="form-control" placeholder="Phone" />
+                                        <span asp-validation-for="NewTransfer.Phone"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.PickUpLocation">Pick-up Location</label>
+                                        <input asp-for="NewTransfer.PickUpLocation" class="form-control" placeholder="Pick-up Location" />
+                                        <span asp-validation-for="NewTransfer.PickUpLocation"></span>
+                                    </div>
+                                </div>
+                            </div>
 
-											</div>
-										</div>
-									</div>
-									
-									<div class="row">
-										<div class="col-lg-12 col-md-12">
-											<div class="form-group">
-										<label asp-for="NewTransfer.SpecialRequest">Special Request</label>
-										<textarea asp-for="NewTransfer.SpecialRequest" class="form-control" placeholder="Type Here..."></textarea>
-										<span asp-validation-for="NewTransfer.SpecialRequest"></span>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.Adults">Adults</label>
+                                        <input asp-for="NewTransfer.Adults" type="number" class="form-control" placeholder="0" />
+                                        <span asp-validation-for="NewTransfer.Adults"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.Children">Children</label>
+                                        <input asp-for="NewTransfer.Children" type="number" class="form-control" placeholder="0" />
+                                        <span asp-validation-for="NewTransfer.Children"></span>
+                                    </div>
+                                </div>
+                            </div>
 
-											</div>
-										</div>
-									</div>
-									
-									<div class="row">
-										<div class="col-lg-12 col-md-12">
-											<button type="submit" class="btn btn-primary">Book now</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-			</section>
-			<div class="clearfix"></div>
-			<!-- ============================ Who We Are End ================================== -->
-	<!-- ============================ Newsletter Start ================================== -->
-	<section class="alert-wrap pt-5 pb-5" style="background:#ed7e35 url(img/bg-new.png);">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<div class="jobalert-sec">
-						<h3 class="mb-1 text-light">Get New Offers & Deals Notification!</h3>
-						<p class="text-light">Subscribe & get all Offers & Deals notification.</p>
-					</div>
-				</div>
-				<form method="post" class="col-lg-6 col-md-6" asp-page-handler="Email">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.PickupDate">Pickup Date</label>
+                                        <input asp-for="NewTransfer.PickupDate" type="date" class="form-control" />
+                                        <span asp-validation-for="NewTransfer.PickupDate"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="NewTransfer.PickupTime">Pickup Time</label>
+                                        <input asp-for="NewTransfer.PickupTime" type="time" class="form-control" />
+                                        <span asp-validation-for="NewTransfer.PickupTime"></span>
+                                    </div>
+                                </div>
+                            </div>
 
-					<div class="input-group">
-						<input type="email" class="form-control" placeholder="Enter Your Email" asp-for="NewGuest.Email">
-						<div class="input-group-append">
-							<button type="submit" class="btn btn-black black">Subscribe</button>
-						</div>
-					</div>
-					<!-- Display validation error for NewGuest.Email -->
-					<span asp-validation-for="NewGuest.Email" class="text-danger"></span>
+                            <div class="form-group">
+                                <label asp-for="NewTransfer.SpecialRequest">Special Request</label>
+                                <textarea asp-for="NewTransfer.SpecialRequest" class="form-control" placeholder="Type Here..."></textarea>
+                                <span asp-validation-for="NewTransfer.SpecialRequest"></span>
+                            </div>
 
-				</form>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Book now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-			</div>
-		</div>
-	</section>
-	<!-- ============================ Newsletter Start ================================== -->
-			
-			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
-			
-			
+            </div>
+        </div>
+    </section>
 
-		</div>
-		<!-- ============================================================== -->
-		<!-- End Wrapper -->
-		<!-- ============================================================== -->
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+</div>
+
 

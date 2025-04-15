@@ -7,41 +7,35 @@ namespace SunnyHurghada.Pages
 {
     public class TransferModel : PageModel
     {
-        private readonly GuestEmailRepository guestEmailRepository;
-        private readonly TransferReprository transferReprository;
+        private readonly TransferReprository _transferRepository;
+        private readonly PaymentRepository _paymentRepository;
 
-        public TransferModel(GuestEmailRepository guestEmailRepository,TransferReprository transferReprository )
+        public TransferModel(TransferReprository transferRepository, PaymentRepository paymentRepository)
         {
-            this.guestEmailRepository = guestEmailRepository;
-            this.transferReprository = transferReprository;
-
+            _transferRepository = transferRepository;
+            _paymentRepository = paymentRepository;
         }
-        [BindProperty]
-        public GuestEmail NewGuest { get; set; }
+
         [BindProperty]
         public TransferBooking NewTransfer { get; set; }
 
-        public void OnGet()
-        {
-        }
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid) { return Page(); }
-            NewTransfer.PaymentId = 10; //TODO: Get the payment ID from the session or database  
-            transferReprository.Add(NewTransfer);
+        [BindProperty]
+        public Payment NewPayment { get; set; }
 
-            //TODO:Redirtect to payment page page
-            return Page();
-        }
-        public IActionResult OnPostEmail()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
+                NewPayment.Status = "Failed";
                 return Page();
             }
-            NewGuest.CreatedAt = DateTime.Now;
 
-            guestEmailRepository.Add(NewGuest);
+            NewPayment.Status = "Success";
+            NewPayment.CreatedAt = DateTime.Now;
+            _paymentRepository.Add(NewPayment);
+
+            NewTransfer.PaymentId = NewPayment.Id;
+            _transferRepository.Add(NewTransfer);
 
             return Page();
         }

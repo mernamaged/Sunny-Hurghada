@@ -10,9 +10,9 @@ namespace Sunny_Hurghada.Repositories
         {
             this.context= context;
         }
-        public void Add(GuestEmail email)
+        public void Add(GuestEmail guestEmail)
         {
-            context.GuestEmails.Add(email);
+            context.GuestEmails.Add(guestEmail);
             context.SaveChanges();
         }
     }

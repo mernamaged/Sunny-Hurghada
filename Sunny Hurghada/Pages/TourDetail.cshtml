@@ -1,331 +1,257 @@
-﻿@page 
+﻿@page
 @model SunnyHurghada.Pages.TourDetailModel
-@{
-}
-	<!-- ============================================================== -->
-	<!-- Main wrapper - style you can find in pages.scss -->
-	<!-- ============================================================== -->
-	<div id="main-wrapper">
 
-		<!-- ============================================================== -->
-		<!-- Top header  -->
-		<!-- ============================================================== -->
-		<div class="clearfix"></div>
-		<!-- ============================================================== -->
-		<!-- Top header  -->
-		<!-- ============================================================== -->
+<div id="main-wrapper">
 
-
-		<!-- ============================ Hero Banner  Start================================== -->
-		<div class="featured-slick">
-			<div class="featured-slick-slide">
+    <!-- ========== Hero Banner with Slider ========== -->
+    <div class="featured-slick">
+        <div class="featured-slick-slide">
             @foreach (var image in Model.SpotList.SpotImages)
             {
-				<div>
-					<a href="img/g-1.jpg" class="mfp-gallery">
-						<img src="img/tours/@image.ImgUrl"
-							 class="img-fluid mx-auto" alt="" />
-					</a>
-				</div>
+                <div>
+                    <a href="img/g-1.jpg" class="mfp-gallery">
+                        <img src="img/tours/@image.ImgUrl" class="img-fluid mx-auto" alt="" />
+                    </a>
+                </div>
             }
-			</div>
-		</div>
+        </div>
+    </div>
 
-		<section class="spd-wrap">
-			<div class="container">
-				<div class="row">
+    <!-- ========== Tour Highlights Section ========== -->
+    <section class="spd-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-					<div class="col-lg-12 col-md-12">
+                    <div class="slide-property-detail">
 
-						<div class="slide-property-detail">
+                        <div class="slide-property-first">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
 
-							<div class="slide-property-first">
-								<div class="row">
-									<div class="col-lg-8 col-md-8">
-										<div class="row">
+                                        <div class="col-lg-3 col-6">
+                                            <div class="singles_item">
+                                                <div class="icon"><i class="icofont-stopwatch"></i></div>
+                                                <div class="info">
+                                                    <h4 class="name">Duration</h4>
+                                                    <p class="value">@Model.SpotList.Duration hours</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-											<!-- Single Items -->
-											<div class="col-lg-3 col-6">
-												<div class="singles_item">
-													<div class="icon">
-														<i class="icofont-stopwatch"></i>
-													</div>
-													<div class="info">
-														<h4 class="name">Duration</h4>
-														<p class="value">@Model.SpotList.Duration hours</p>
-													</div>
-												</div>
-											</div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="singles_item">
+                                                <div class="icon"><i class="icofont-beach"></i></div>
+                                                <div class="info">
+                                                    <h4 class="name">Tour Type</h4>
+                                                    <p class="value">@Model.SpotList.TourType.TourTypeLocalizeds.First().Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-											<!-- Single Items -->
-											<div class="col-lg-3 col-6">
-												<div class="singles_item">
-													<div class="icon">
-														<i class="icofont-beach"></i>
-													</div>
-													<div class="info">
-														<h4 class="name">Tour Type</h4>
-														<p class="value">@Model.SpotList.TourType.TourTypeLocalizeds.First().Name</p>
-													</div>
-												</div>
-											</div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="singles_item">
+                                                <div class="icon"><i class="icofont-island"></i></div>
+                                                <div class="info">
+                                                    <h4 class="name">Location</h4>
+                                                    <p class="value">@Model.SpotList.Destination.Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-											<!-- Single Items -->
-											<div class="col-lg-3 col-6">
-												<div class="singles_item">
-													<div class="icon">
-														<i class="icofont-island"></i>
-													</div>
-													<div class="info">
-														<h4 class="name">Location</h4>
-														<p class="value">@Model.SpotList.Destination.Name</p>
-													</div>
-												</div>
-											</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-										</div>
-									</div>
-								</div>
-							</div>
+                    </div>
 
-						</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ============================ Hero Banner End ================================== -->
+    <!-- ========== Tour Details Section ========== -->
+    <section class="gray pt-0">
+        <div class="container">
+            <div class="row">
 
-		<!-- ============================ Property Detail Start ================================== -->
-		<section class="gray pt-0">
-			<div class="container">
-				<div class="row">
+                <!-- Tour Details -->
+                <div class="col-lg-8">
 
-					<!-- property main detail -->
-					<div class="col-lg-8 col-md-12 col-sm-12 order-lg-1 order-md-2 order-2">
+                    <div class="block-wrap mt-4">
+                        <div class="block-header">
+                            <h4 class="block-title">Description</h4>
+                        </div>
+                        <div class="block-body">
+                            <p>@Model.SpotList.SpotLocalizeds.First().Description</p>
+                        </div>
+                    </div>
 
-						<!-- Single Block Wrap -->
-						<div class="block-wrap mt-4">
+                    <div class="block-wrap">
+                        <div class="block-header">
+                            <h4 class="block-title">Includes</h4>
+                        </div>
+                        <div class="block-body">
+                            <ul class="avl-features third">
+                                @foreach (var item in Model.SpotList.SpotLocalizeds.First().Includes.Split('/'))
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
 
-							<div class="block-header">
-								<h4 class="block-title">Description</h4>
-							</div>
+                    <div class="block-wrap">
+                        <div class="block-header">
+                            <h4 class="block-title">Excludes</h4>
+                        </div>
+                        <div class="block-body">
+                            <ul class="avl-features third">
+                                @foreach (var item in Model.SpotList.SpotLocalizeds.First().Excludes.Split('/'))
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
 
-							<div class="block-body">
-								<p>@Model.SpotList.SpotLocalizeds.First().Description</p>
-							</div>
+                    <div class="block-wrap">
+                        <div class="block-header">
+                            <h4 class="block-title">What to Bring</h4>
+                        </div>
+                        <div class="block-body">
+                            <ul class="avl-features third">
+                                @foreach (var item in Model.SpotList.SpotLocalizeds.First().WhatToBring.Split('/'))
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
 
-						</div>
+                </div>
 
-						<!-- Single Block Wrap -->
-						<div class="block-wrap">
+                <!-- Booking Sidebar -->
+                <div class="col-lg-4">
+                    <div class="side-booking-wrap over-top radius-0">
+                        <div class="side-booking-header row">
+                            <div class="col-6">
+                                <span>Adult</span><span>Price</span>
+                                <h3 class="price">$@((int)Model.DiscountPrice)</h3>
+                            </div>
+                            <div class="col-6">
+                                <span>Child</span><span>Price</span>
+                                <h3 class="price">$@((int)Model.SpotList.ChildPrice)</h3>
+                            </div>
+                        </div>
+                        <form method="post">
+                            <div asp-validation-summary="All"></div>
+                        <div class="px-4">
+                            <div class="row side-booking-body pb-3">
+                                <div class="col-12">
+                                    <div class="form-group px-0">
+                                        <label asp-for="NewSpotBooking.TripDate">Check In</label>
+                                        <div class="cld-box">
+                                            <i class="ti-calendar"></i>
+                                                <input asp-for="NewSpotBooking.TripDate" type="text" name="checkin" class="form-control" />
+                                                <span asp-validation-for="NewSpotBooking.TripDate"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-							<div class="block-header">
-								<h4 class="block-title">Includes</h4>
-							</div>
+                                <div class="col-6">
+                                    <div class="form-group px-0">
+                                        <label asp-for="NewSpotBooking.Adults">Adults</label>
+                                        <div class="guests-box">
+                                            <button class="counter-btn" type="button" id="cnt-down"><i class="ti-minus"></i></button>
+                                                <input asp-for="NewSpotBooking.Adults" type="text" id="guestNo" name="guests" value="2" />
+                                            <button class="counter-btn" type="button" id="cnt-up"><i class="ti-plus"></i></button>
+                                                <span asp-validation-for="NewSpotBooking.Adults"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-							<div class="block-body">
-								<ul class="avl-features third">
-								@foreach (var item in Model.SpotList.SpotLocalizeds.First().Includes.Split('/'))
-								{
-									<li>@item</li>
-									}
-								</ul>
-							</div>
+                                <div class="col-6">
+                                    <div class="form-group px-0">
+                                            <label asp-for="NewSpotBooking.Children">Kids</label>
+                                        <div class="guests-box">
+                                            <button class="counter-btn" type="button" id="kcnt-down"><i class="ti-minus"></i></button>
+                                            <input asp-for="NewSpotBooking.Children" type="text" id="kidsNo" name="kids" value="0" />
+                                            <button class="counter-btn" type="button" id="kcnt-up"><i class="ti-plus"></i></button>
+                                                <span asp-validation-for="NewSpotBooking.Children"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-						</div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label asp-for="NewSpotBooking.FullName">Full Name</label>
+                                            <input asp-for="NewSpotBooking.FullName"  type="text" class="form-control" placeholder="Your Name" />
+                                            <span asp-validation-for="NewSpotBooking.FullName"></span>
+                                    </div>
+                                </div>
 
-						<!-- Single Block Wrap -->
-						<div class="block-wrap">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label asp-for="NewSpotBooking.Email">Your Email</label>
+                                            <input asp-for="NewSpotBooking.Email" type="email" class="form-control" placeholder="Your Email" />
+                                            <span asp-validation-for="NewSpotBooking.Email"></span>
+                                    </div>
+                                </div>
 
-							<div class="block-header">
-								<h4 class="block-title">Excludes</h4>
-							</div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                            <label asp-for="NewSpotBooking.Nationality">Nationality</label>
+                                            <select asp-for ="NewSpotBooking.Nationality" class="form-control">
+                                            <option>Select Nationality</option>
+                                            <option value="eg">Egyptian</option>
+                                            <option value="us">American</option>
+                                            <option value="de">German</option>
+                                            <option value="ru">Russian</option>
+                                            <option value="uk">British</option>
+                                        </select>
+                                            <span asp-validation-for="NewSpotBooking.Nationality"></span>
+                                    </div>
+                                </div>
 
-							<div class="block-body">
-								<ul class="avl-features third">
-								@foreach (var item in Model.SpotList.SpotLocalizeds.First().Excludes.Split('/'))
-								{
-									<li>@item</li>
-								}
-								</ul>
-							</div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label asp-for="NewSpotBooking.Phone">Your Phone</label>
+                                            <input asp-for="NewSpotBooking.Phone" type="tel" class="form-control" placeholder="Your Phone" />
+                                            <span asp-validation-for="NewSpotBooking.Phone"></span>
+                                    </div>
+                                </div>
 
-						</div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                            <label asp-for="NewSpotBooking.SpecialRequest">Special Request</label>
+                                            <textarea asp-for="NewSpotBooking.SpecialRequest"  class="form-control" placeholder="Send Message to author..."></textarea>
+                                            <span asp-validation-for="NewSpotBooking.SpecialRequest"></span>
+                                    </div>
+                                </div>
 
-						<!-- Single Block Wrap -->
-						<div class="block-wrap">
+                                <div class="col-12">
+                                    <div class="stbooking-footer mt-2 mb-4">
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn full-width btn-theme">Book Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div> <!-- End Sidebar -->
 
-							<div class="block-header">
-								<h4 class="block-title">What to bring</h4>
-							</div>
+            </div>
+        </div>
+    </section>
 
-							<div class="block-body">
-								<ul class="avl-features third">
-								@foreach (var item in Model.SpotList.SpotLocalizeds.First().WhatToBring.Split('/'))
-								{
-									<li>@item</li>
-								}
-								</ul>
-							</div>
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
-						</div>
+</div>
 
-					</div>
-
-					<!-- property Sidebar -->
-					<div class="col-lg-4 col-md-12 col-sm-12 order-lg-2 order-md-1 order-1">
-
-						<div class="side-booking-wrap over-top radius-0">
-							<div class="side-booking-header row">
-								<div class="col-6">
-									<span>Adult</span>
-									<span>Price</span>
-								<h3 class="price">$@((int)Model.DiscountPrice)</h3>
-								</div>
-								<div class="col-6">
-									<span>child</span>
-									<span>Price</span>
-									<h3 class="price">$@((int)Model.SpotList.ChildPrice)</h3>
-								</div>
-							</div>
-							<div class="px-4">
-								<div class="row side-booking-body pb-3">
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group px-0">
-											<label>Check In</label>
-											<div class="cld-box">
-												<i class="ti-calendar"></i>
-												<input type="text" name="checkin" class="form-control"
-													value="10/24/2020" />
-											</div>
-										</div>
-									</div>
-
-									<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-										<div class="form-group px-0">
-											<div class="guests">
-												<label for="guests">Adults</label>
-												<div class="guests-box">
-													<button class="counter-btn" type="button" id="cnt-down"><i
-															class="ti-minus"></i></button>
-													<input type="text" id="guestNo" name="guests" value="2" />
-													<button class="counter-btn" type="button" id="cnt-up"><i
-															class="ti-plus"></i></button>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-										<div class="form-group px-0">
-											<div class="guests">
-												<label for="guests">Kids</label>
-												<div class="guests-box">
-													<button class="counter-btn" type="button" id="kcnt-down"><i
-															class="ti-minus"></i></button>
-													<input type="text" id="kidsNo" name="kids" value="0" />
-													<button class="counter-btn" type="button" id="kcnt-up"><i
-															class="ti-plus"></i></button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group">
-											<label>Full Name</label>
-											<input type="text" class="form-control" placeholder="Your Name">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group">
-											<label>Your Email</label>
-											<input type="text" class="form-control" placeholder="Your Email">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group">
-											<label>Nationality</label>
-											<select class="form-control">
-												<option >Select Nationality</option>
-												<option value="eg">Egyption</option>
-												<option value="eg">Egyption</option>
-												<option value="eg">Egyption</option>
-												<option value="eg">Egyption</option>
-												<option value="eg">Egyption</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group">
-											<label>Your Phone</label>
-											<input type="number" class="form-control" placeholder="Your Phone">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="form-group">
-											<label>Special Request</label>
-											<textarea class="form-control"
-												placeholder="Send Message to author..."></textarea>
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="stbooking-footer mt-2 mb-4">
-											<div class="form-group mb-0 pb-0">
-												<a href="#" class="btn full-width btn-theme">Book now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- ============================ Property Detail End ================================== -->
-	<!-- ============================ Newsletter Start ================================== -->
-	<section class="alert-wrap pt-5 pb-5" style="background:#ed7e35 url(img/bg-new.png);">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<div class="jobalert-sec">
-						<h3 class="mb-1 text-light">Get New Offers & Deals Notification!</h3>
-						<p class="text-light">Subscribe & get all Offers & Deals notification.</p>
-					</div>
-				</div>
-				<form method="post" class="col-lg-6 col-md-6">
-
-					<div class="input-group">
-						<input type="email" class="form-control" placeholder="Enter Your Email" asp-for="NewGuest.Email">
-						<div class="input-group-append">
-							<button type="submit" class="btn btn-black black">Subscribe</button>
-						</div>
-					</div>
-					<!-- Display validation error for NewGuest.Email -->
-					<span asp-validation-for="NewGuest.Email" class="text-danger"></span>
-
-				</form>
-
-			</div>
-		</div>
-	</section>
-	<!-- ============================ Newsletter Start ================================== -->
-
-
-		<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
-
-
-
-	</div>
-	<!-- ============================================================== -->
-	<!-- End Wrapper -->
-	<!-- ============================================================== -->

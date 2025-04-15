@@ -1,4 +1,5 @@
-﻿using Sunny_Hurghada.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Sunny_Hurghada.Models;
 
 namespace Sunny_Hurghada.Repositories
 {
@@ -9,13 +10,13 @@ namespace Sunny_Hurghada.Repositories
         {
             _context = context;
         }
-        public List<Destination> GetAll()
+        public async Task< List<Destination>> GetAll()
         {
-            return _context.Destinations.ToList();
+            return await _context.Destinations.ToListAsync();
         }
-        public List<string> GetNames()
+        public async Task<List<string>> GetDestinationsNames()
         {
-            return _context.Destinations.Select(t => t.Name).ToList();
+            return await _context.Destinations.Select(t => t.Name).ToListAsync();
         }
     }
 }

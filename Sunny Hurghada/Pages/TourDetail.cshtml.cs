@@ -8,37 +8,53 @@ namespace SunnyHurghada.Pages
     public class TourDetailModel : PageModel
     {
         private readonly SpotRepository spotRepository;
-        private readonly GuestEmailRepository guestEmailRepository;
-        public TourDetailModel(SpotRepository spotRepository , GuestEmailRepository guestEmailRepository)
+        private readonly PaymentRepository _paymentRepository;
+        public TourDetailModel(SpotRepository spotRepository, PaymentRepository paymentRepository)
         {
             this.spotRepository = spotRepository;
-            this.guestEmailRepository = guestEmailRepository;
+            _paymentRepository = paymentRepository;
         }
         public int Id { get; set; }
+        public int LanguageId { get; set; }
         [BindProperty]
         public Spot SpotList { get; set; }
         public decimal DiscountPrice { get; private set; }
+        [BindProperty]
+        public SpotBooking NewSpotBooking { get; set; }
 
-        public void OnGet(int id)
+        [BindProperty]
+        public Payment NewPayment { get; set; }
+        public void OnGet(int id,int languageId)
         {
             Id = id;
-            SpotList = spotRepository.GetById(Id);
-            DiscountPrice = spotRepository.discountPrice(Id);
+            LanguageId = languageId;
+            SpotList = spotRepository.GetById(Id,LanguageId);
+            DiscountPrice = spotRepository.DiscountPrice(Id);
         }
-        [BindProperty]
-        public GuestEmail NewGuest { get; set; }
-        public IActionResult OnPostEmail()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
+                NewPayment.Status = "Failed";
                 return Page();
             }
-            NewGuest.CreatedAt = DateTime.Now;
 
-            guestEmailRepository.Add(NewGuest);
+            NewPayment.Status = "Success";
+            NewPayment.CreatedAt = DateTime.Now;
+            NewPayment.TotalAmount= TotalAmount();
+            _paymentRepository.Add(NewPayment);
+
+            NewPayment.Id= NewSpotBooking.PaymentId ;
+            spotRepository.Add(NewSpotBooking);
 
             return Page();
         }
+        public decimal TotalAmount()
 
+        {
+            decimal AdultsPrice = SpotList.AdultPrice * NewSpotBooking.Adults;
+            decimal ChildrenPrice = SpotList.ChildPrice * NewSpotBooking.Children;
+            return AdultsPrice+ ChildrenPrice;
+        }
     }
 }

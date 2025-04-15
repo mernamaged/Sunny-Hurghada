@@ -1,92 +1,79 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.EntityFrameworkCore;
 using Sunny_Hurghada.Models;
 
 namespace Sunny_Hurghada.Repositories
 {
     public class SpotRepository
     {
-        private SunnyHurghadaContext context;
+        private readonly SunnyHurghadaContext _context;
 
         public SpotRepository(SunnyHurghadaContext context)
         {
-            this.context= context;
+            _context = context;
         }
-        public List<Spot> GetSpots()
+
+        private IQueryable<Spot> GetAllSpotsQuery()
         {
-                var spots = context.Spots
-                    .Include(s => s.SpotLocalizeds)
-                    .Include(s => s.SpotImages)
-                    .Include(s=>s.Destination)
-                    .ToList();                      
-                return spots;
-        }
-        public Spot GetById(int id)
-        {
-            return context.Spots
+            return _context.Spots
                 .Include(s => s.SpotLocalizeds)
                 .Include(s => s.SpotImages)
                 .Include(s => s.Destination)
                 .Include(s => s.TourType)
-                .ThenInclude(t => t.TourTypeLocalizeds)
+                    .ThenInclude(tt => tt.TourTypeLocalizeds);
+        }
+
+        public async Task<List<Spot>> GetAllSpots()
+        {
+            return await GetAllSpotsQuery().ToListAsync();
+        }
+
+        public Spot GetById(int id ,int languageId)
+        {
+            return GetAllSpotsQuery()
                 .First(x => x.Id == id);
         }
-        public decimal discountPrice(int id)
+
+        public decimal DiscountPrice(int id)
         {
-            var spot = context.Spots.First(s => s.Id == id);
-            var discountedPrice = spot.AdultPrice - (spot.Discount * spot.AdultPrice / 100);
-            return discountedPrice;
+            var spot = _context.Spots.First(s => s.Id == id);
+            return spot.AdultPrice - (spot.Discount * spot.AdultPrice / 100);
         }
-        public List<Spot> GetSpotsByToUrTypeByName(string name)
+
+        public async Task <List<Spot>> GetSpotsByDropdownChoice(string name)
         {
-            var query = context.Spots
-                .Include(s => s.SpotLocalizeds)
-                .Include(s => s.SpotImages)
-                .Include(s => s.Destination)
-                .Include(s => s.TourType)
-                    .ThenInclude(tt => tt.TourTypeLocalizeds)
-                .AsQueryable();
+            var query = GetAllSpotsQuery();
 
             if (!string.IsNullOrWhiteSpace(name))
             {
                 query = query.Where(s =>
-                    s.TourType.TourTypeLocalizeds.First().Name == name ||s.Destination.Name == name);
+                    s.TourType.TourTypeLocalizeds.Any(tt => tt.Name == name) ||
+                    s.Destination.Name == name);
             }
 
-            return query.ToList();
+            return await query.ToListAsync();
         }
-        public List<Spot> Search(string destination, string category)
-        {
-            var query = context.Spots
-                .Include(s => s.SpotLocalizeds)
-                .Include(s => s.SpotImages)
-                .Include(s => s.Destination)
-                .Include(s => s.TourType)
-                    .ThenInclude(tt => tt.TourTypeLocalizeds)
-                .AsQueryable();
 
-            // Filter by destination if provided
-            if (!string.IsNullOrWhiteSpace(destination) )
+        public async Task<List<Spot>> GetSearchResults(string destination, string tourType)
+        {
+            var query = GetAllSpotsQuery();
+
+            if (!string.IsNullOrWhiteSpace(destination))
             {
                 query = query.Where(s => s.Destination.Name == destination);
             }
 
-            // Filter by category if provided
-            if (!string.IsNullOrWhiteSpace(category))
+            if (!string.IsNullOrWhiteSpace(tourType))
             {
-                query = query.Where(s => s.TourType.TourTypeLocalizeds.First().Name == category);
+                query = query.Where(s => s.TourType.TourTypeLocalizeds.Any(l => l.Name == tourType));
             }
 
-            // Filter by both destination and category if both are provided
-            if (!string.IsNullOrWhiteSpace(destination) && !string.IsNullOrWhiteSpace(category))
-            {
-                query = query.Where(s =>
-                    s.Destination.Name == destination &&
-                    s.TourType.TourTypeLocalizeds.First().Name == category);
-            }
-
-            return query.ToList();
+            return await query.ToListAsync();
         }
-
-
+        public void Add(SpotBooking spotBooking)
+        {
+            _context.SpotBookings.Add(spotBooking);
+            _context.SaveChanges();
+        }
     }
 }

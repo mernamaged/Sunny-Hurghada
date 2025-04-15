@@ -11,9 +11,12 @@ namespace Sunny_Hurghada.Repositories
         {
             this.context= context;
         }
-        public List<TourType> GetAll()
+        public async Task<List<string>> GetTourTypeLocalizedNames(int id = 1 )
         {
-            return context.TourTypes.Include(l=> l.TourTypeLocalizeds).ToList();
+            return await context.TourTypeLocalizeds
+             .Where(t => t.LanguageId == id)
+             .Select(t => t.Name)
+             .ToListAsync();
         }
     }
 }

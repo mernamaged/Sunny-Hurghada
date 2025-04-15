@@ -7,39 +7,28 @@ namespace SunnyHurghada.Pages
 {
     public class ContactModel : PageModel
     {
-        private ContactRepository _contactRepository;
-        private GuestEmailRepository guestEmailRepository;
+        private readonly ContactRepository _contactRepository;
 
-        public ContactModel(ContactRepository contactRepository,GuestEmailRepository guestEmailRepository)
+        public ContactModel(ContactRepository contactRepository)
         {
             _contactRepository = contactRepository;
-            this.guestEmailRepository = guestEmailRepository;
         }
 
         [BindProperty]
         public ContactU NewContact { get; set; }
 
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid) { return Page(); }
-            _contactRepository.Add(NewContact);
-           
-            //TODO:Redirtect to payment page page
-            return Page();
-        }
-        [BindProperty]
-        public GuestEmail NewGuest { get; set; }
-        public IActionResult OnPostEmail()
+        public IActionResult OnPostContact()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            NewGuest.CreatedAt = DateTime.Now;
 
-            guestEmailRepository.Add(NewGuest);
+            _contactRepository.Add(NewContact);
 
-            return Page();
+            // TODO: Redirect to a confirmation or payment page after submission
+            return RedirectToPage(); // Example redirection (update as needed)
         }
     }
 }
+

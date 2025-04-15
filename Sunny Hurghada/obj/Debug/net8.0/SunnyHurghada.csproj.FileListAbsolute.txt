@@ -115,3 +115,4 @@ E:\training\Sunny Hurghada\Sunny Hurghada\bin\Debug\net8.0\Newtonsoft.Json.Bson.
 E:\training\Sunny Hurghada\Sunny Hurghada\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 E:\training\Sunny Hurghada\Sunny Hurghada\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 E:\training\Sunny Hurghada\Sunny Hurghada\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\training\Sunny Hurghada\Sunny Hurghada\obj\Debug\net8.0\SunnyHurghada.sourcelink.json

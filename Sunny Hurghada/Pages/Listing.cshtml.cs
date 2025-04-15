@@ -7,43 +7,32 @@ namespace SunnyHurghada.Pages
 {
     public class ListingModel : PageModel
     {
-        private readonly SpotRepository spotRepository;
-        private readonly GuestEmailRepository guestEmailRepository;
-        public ListingModel (SpotRepository spotRepository, GuestEmailRepository guestEmailRepository)
+        private readonly SpotRepository _spotRepository;
+
+        public ListingModel(SpotRepository spotRepository)
         {
-            this.spotRepository = spotRepository;
-            this.guestEmailRepository = guestEmailRepository;
+            _spotRepository = spotRepository;
         }
+
         [FromRoute]
         public int Id { get; set; }
+
         [FromRoute]
         public string Name { get; set; } = string.Empty;
+        public int LanguageId { get; set; }
         [BindProperty]
-        public int TotalSpots { get; private set; }
-        public List<Spot> spotsbyname { get; private set; }
+        public int TotalSpotsSelected { get; private set; }
 
-        public void OnGet(int id,string name )
+        public List<Spot> SelectedSpot { get; private set; }
+
+        public async Task  OnGet(int id, string name,int languageId)
         {
             Id = id;
             Name = name;
-            spotsbyname = spotRepository.GetSpotsByToUrTypeByName(name);
-            TotalSpots = spotRepository.GetSpotsByToUrTypeByName(name).Count();
+            LanguageId= languageId;
+            SelectedSpot = await _spotRepository.GetSpotsByDropdownChoice(name);
 
-        }
-        [BindProperty]
-        public GuestEmail NewGuest { get; set; }
-
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            NewGuest.CreatedAt = DateTime.Now;
-
-            guestEmailRepository.Add(NewGuest);
-
-            return Page();
+            TotalSpotsSelected = SelectedSpot.Count;
         }
     }
 }
